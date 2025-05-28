@@ -30,15 +30,18 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     
 
   const p = document.createElement('p')
-  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+  p.classList.add('font-bold','border','p-4','lg:w-1/2','w-5/6', 'mb-2', 'mx-auto','rounded-lg',)
 
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
+  p.id = 'history-details'
 
 
 const timeP = document.createElement('p');
+timeP.classList.add('font-mono','mb-4','w-5/6','mx-auto')
 
 const now = new Date();
 const dateTimeString = now.toLocaleString('en-BD', {
+  weekday: 'short',
   timeZone: 'Asia/Dhaka',
   hour: '2-digit',
   minute: '2-digit',
@@ -51,7 +54,7 @@ const dateTimeString = now.toLocaleString('en-BD', {
   });
 
 
-  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  timeP.innerText = `Date: ${dateTimeString}`;
   document.getElementById('history-info').appendChild(p)
   document.getElementById('history-info').appendChild(timeP)
 
@@ -98,13 +101,15 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     
     
   const p = document.createElement('p')
-  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+  p.classList.add('font-bold','border','p-4','lg:w-1/2', 'mb-6', 'w-5/6', 'mx-auto','rounded-lg')
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
 
 const timeP = document.createElement('p');
+timeP.classList.add('font-mono','mb-4','w-5/6','mx-auto')
 
 const now = new Date();
 const dateTimeString = now.toLocaleString('en-BD', {
+  weekday: 'short',
   timeZone: 'Asia/Dhaka',
   hour: '2-digit',
   minute: '2-digit',
@@ -117,7 +122,7 @@ const dateTimeString = now.toLocaleString('en-BD', {
   });
 
 
-  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  timeP.innerText = `Date: ${dateTimeString}`;
   document.getElementById('history-info').appendChild(p)
   document.getElementById('history-info').appendChild(timeP)
 
@@ -156,26 +161,28 @@ document.getElementById('btn-quota')
     
     
   const p = document.createElement('p')
-  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+  p.classList.add('font-bold','border','p-4','lg:w-1/2','mb-6', 'w-5/6', 'mx-auto','rounded-lg')
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
 
   const timeP = document.createElement('p');
+timeP.classList.add('font-mono','mb-4','w-5/6','mx-auto')
 
 const now = new Date();
 const dateTimeString = now.toLocaleString('en-BD', {
   timeZone: 'Asia/Dhaka',
+  weekday: 'short',       
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
   hour12: true,
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric',
   timeZoneName: 'short'
-  });
+});
 
 
-  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  timeP.innerText = `Date: ${dateTimeString}`;
   document.getElementById('history-info').appendChild(p)
   document.getElementById('history-info').appendChild(timeP)
 
