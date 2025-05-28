@@ -33,7 +33,6 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
   p.classList.add('font-bold','border','p-4','lg:w-1/2','w-5/6', 'mb-2', 'mx-auto','rounded-lg',)
 
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
-  p.id = 'history-details'
 
 
 const timeP = document.createElement('p');
@@ -101,7 +100,7 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     
     
   const p = document.createElement('p')
-  p.classList.add('font-bold','border','p-4','lg:w-1/2', 'mb-6', 'w-5/6', 'mx-auto','rounded-lg')
+  p.classList.add('font-bold','border','p-4','lg:w-1/2', 'mb-2', 'w-5/6', 'mx-auto','rounded-lg')
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
 
 const timeP = document.createElement('p');
@@ -161,7 +160,8 @@ document.getElementById('btn-quota')
     
     
   const p = document.createElement('p')
-  p.classList.add('font-bold','border','p-4','lg:w-1/2','mb-6', 'w-5/6', 'mx-auto','rounded-lg')
+  p.classList.add('font-bold','border','p-4','lg:w-1/2','mb-2', 'w-5/6', 'mx-auto','rounded-lg')
+
   p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
 
   const timeP = document.createElement('p');
