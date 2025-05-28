@@ -4,4 +4,8 @@ document.getElementById('history').addEventListener('click',function(){
     historyInfo.classList.remove('hidden')
     const cardContainer = document.getElementById('cards-container')
     cardContainer.classList.add('hidden')
+    const donationButton = document.getElementById('donation')
+    donationButton.classList.remove('bg-[#B4F461]')
+    const historyButton = document.getElementById('history')
+    historyButton.classList.add('bg-[#B4F461]')
 })
