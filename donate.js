@@ -22,7 +22,38 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     alert('Please Input valid Number')
     return
 
+
+
   }
+
+  const heading = document.getElementById('noakhali-heading')
+    
+
+  const p = document.createElement('p')
+  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+
+  p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
+
+
+const timeP = document.createElement('p');
+
+const now = new Date();
+const dateTimeString = now.toLocaleString('en-BD', {
+  timeZone: 'Asia/Dhaka',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: true,
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  timeZoneName: 'short'
+  });
+
+
+  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  document.getElementById('history-info').appendChild(p)
+  document.getElementById('history-info').appendChild(timeP)
 
 
 
@@ -63,6 +94,33 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
 
   }
 
+    const heading = document.getElementById('feni-heading')
+    
+    
+  const p = document.createElement('p')
+  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+  p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
+
+const timeP = document.createElement('p');
+
+const now = new Date();
+const dateTimeString = now.toLocaleString('en-BD', {
+  timeZone: 'Asia/Dhaka',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: true,
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  timeZoneName: 'short'
+  });
+
+
+  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  document.getElementById('history-info').appendChild(p)
+  document.getElementById('history-info').appendChild(timeP)
+
 
 
   document.getElementById('main-balance').innerText = updatedMainBalance
@@ -92,9 +150,34 @@ document.getElementById('btn-quota')
     if (isNaN(inputDonate) || inputDonate <= 0 || inputDonate > mainBalance || !inputField.value) {
       alert('Please Input valid Number')
       return
-
     }
 
+  const heading = document.getElementById('quota-heading')
+    
+    
+  const p = document.createElement('p')
+  p.classList.add('font-bold','border','p-4','w-1/2', 'mx-auto','rounded-lg')
+  p.innerText = `${inputDonate} Taka is Donated for "${heading.innerText}"`
+
+  const timeP = document.createElement('p');
+
+const now = new Date();
+const dateTimeString = now.toLocaleString('en-BD', {
+  timeZone: 'Asia/Dhaka',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: true,
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  timeZoneName: 'short'
+  });
+
+
+  timeP.innerText = `Donation made at: ${dateTimeString}`;
+  document.getElementById('history-info').appendChild(p)
+  document.getElementById('history-info').appendChild(timeP)
 
 
     document.getElementById('main-balance').innerText = updatedMainBalance
